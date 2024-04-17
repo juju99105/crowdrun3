@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 html,
 body {
    height: 100%;
@@ -25,9 +27,10 @@ header {
    grid-row-end: 2;
    grid-column-start: 1;
    grid-column-end: 4;
-   background-color: aqua;
+   background-color: white;
    justify-content: space-around;
    height: 7rem;
+   font-family: "Work Sans", sans-serif;
 }
 
 .nav {
@@ -38,7 +41,7 @@ header {
 
 .nav a {
    text-decoration: none;
-   color: black;
+   color: red;
    padding: 1rem;
 }
 
@@ -47,7 +50,7 @@ header {
    grid-row-end: 3;
    grid-column-start: 1;
    grid-column-end: 2;
-   background-color: red;
+   background-color: white;
    height: 100%;
 }
 
@@ -114,17 +117,18 @@ header {
    grid-row-end: 3;
    grid-column-start: 3;
    grid-column-end: 4;
-   background-color: red;
+   background-color: white;
    height: 100%;
 }
 
 footer {
+   font-family: "Work Sans", sans-serif;
    display: grid;
    grid-row-start: 3;
    grid-row-end: 4;
    grid-column-start: 1;
    grid-column-end: 4;
-   background-color: aqua;
+   background-color: white;
    grid-template-columns: 1fr 1fr;
    grid-template-rows: 1fr;
 }
@@ -162,12 +166,13 @@ footer {
 /* ABOUT */
 
 .main-container-abt {
+   font-family: "Work Sans", sans-serif;
    display: grid;
    grid-row-start: 2;
    grid-row-end: 3;
    grid-column-start: 2;
    grid-column-end: 3;
-   background-color: pink;
+   background-color: white;
    height: 100%;
    grid-template-columns: 1fr 1fr 1fr 1fr;
    grid-template-rows: 1fr 1fr;
@@ -179,7 +184,7 @@ footer {
    grid-row-end: 2;
    grid-column-start: 1;
    grid-column-end: 5;
-   background-color: yellow;
+   background-color: white;
    padding: 2rem;
    justify-content: space-between;
 }
@@ -196,6 +201,8 @@ footer {
    border: none;
    display: inline-block;
    margin: 0.5rem;
+   background-color: red;
+   color: white;
 }
 
 .aboutImgWrap {
@@ -216,7 +223,7 @@ footer {
    grid-row-end: 3;
    grid-column-start: 1;
    grid-column-end: 5;
-   background-color: blue;
+   background-color: white;
    padding: 2rem;
    justify-content: space-between;
    grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -233,7 +240,7 @@ footer {
 }
 
 .reasonWrap {
-   background-color: yellow;
+   background-color: red;
    margin: 1.5rem;
    padding-top: 0.5rem;
    padding-bottom: 0.5rem;
