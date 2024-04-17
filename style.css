@@ -1,0 +1,266 @@
+html,
+body {
+   height: 100%;
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   background-color: white;
+}
+
+div.container {
+   display: grid;
+   grid-template-columns: 0.8fr 5fr 0.8fr;
+   grid-template-rows: 1.3fr 5fr 2fr;
+   height: 100%;
+   width: 100%;
+   gap: 0rem;
+   background-color: white;
+}
+
+header {
+   display: flex;
+   grid-row-start: 1;
+   grid-row-end: 2;
+   grid-column-start: 1;
+   grid-column-end: 4;
+   background-color: aqua;
+   justify-content: space-around;
+   height: 7rem;
+}
+
+.nav {
+   display: flex;
+   align-items: center;
+   height: 100%;
+}
+
+.nav a {
+   text-decoration: none;
+   color: black;
+   padding: 1rem;
+}
+
+.aside1 {
+   grid-row-start: 2;
+   grid-row-end: 3;
+   grid-column-start: 1;
+   grid-column-end: 2;
+   background-color: red;
+   height: 100%;
+}
+
+.main-container {
+   display: grid;
+   grid-row-start: 2;
+   grid-row-end: 3;
+   grid-column-start: 2;
+   grid-column-end: 3;
+   background-color: pink;
+   height: 100%;
+   grid-template-columns: 1fr 3fr;
+   grid-template-rows: 1fr 6fr 2fr;
+}
+
+.infoSearchBar {
+   grid-row-start: 1;
+   grid-row-end: 2;
+   grid-column-start: 1;
+   grid-column-end: 2;
+   background-color: yellow;
+   height: 100%;
+}
+
+.infoWrapper {
+   grid-row-start: 2;
+   grid-row-end: 3;
+   grid-column-start: 1;
+   grid-column-end: 2;
+   background-color: blue;
+   height: 100%;
+}
+
+.mapLocation {
+   grid-row-start: 1;
+   grid-row-end: 2;
+   grid-column-start: 2;
+   grid-column-end: 3;
+   background-color: navajowhite;
+   height: 100%;
+
+}
+
+.map {
+   grid-row-start: 2;
+   grid-row-end: 3;
+   grid-column-start: 2;
+   grid-column-end: 3;
+   background-color: orange;
+   height: 100%;
+}
+
+.sharePath {
+   grid-row-start: 3;
+   grid-row-end: 4;
+   grid-column-start: 1;
+   grid-column-end: 3;
+   background-color: green;
+   height: 100%;
+}
+
+.aside2 {
+   grid-row-start: 2;
+   grid-row-end: 3;
+   grid-column-start: 3;
+   grid-column-end: 4;
+   background-color: red;
+   height: 100%;
+}
+
+footer {
+   display: grid;
+   grid-row-start: 3;
+   grid-row-end: 4;
+   grid-column-start: 1;
+   grid-column-end: 4;
+   background-color: aqua;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr;
+}
+
+.left {
+   /* display: flex; */
+   /* grid-row-start: 1;
+   grid-row-end: 2;
+   grid-column-start: 1;
+   grid-column-end: 2; */
+   background-color: yellow;
+   justify-content: center;
+   align-items: center;
+   padding-left: 12rem;
+   padding-right: 5rem;
+   padding-top: 3rem;
+   padding-bottom: 3rem;
+}
+
+.right {
+   /* display: flex; */
+   /* grid-row-start: 1;
+   grid-row-end: 2;
+   grid-column-start: 3;
+   grid-column-end: 4; */
+   background-color: yellow;
+   justify-content: center;
+   align-items: center;
+   padding-right: 0rem;
+   padding-left: 20rem;
+   padding-top: 4rem;
+   padding-bottom: 5rem;
+}
+
+/* ABOUT */
+
+.main-container-abt {
+   display: grid;
+   grid-row-start: 2;
+   grid-row-end: 3;
+   grid-column-start: 2;
+   grid-column-end: 3;
+   background-color: pink;
+   height: 100%;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-template-rows: 1fr 1fr;
+}
+
+.aboutPage {
+   display: flex;
+   grid-row-start: 1;
+   grid-row-end: 2;
+   grid-column-start: 1;
+   grid-column-end: 5;
+   background-color: yellow;
+   padding: 2rem;
+   justify-content: space-between;
+}
+
+.aboutTextWrap {
+   padding: 1rem;
+   width: 25rem;
+}
+
+.aboutButton {
+   padding: 1rem;
+   width: 10rem;
+   border-radius: 5rem;
+   border: none;
+   display: inline-block;
+   margin: 0.5rem;
+}
+
+.aboutImgWrap {
+   padding: 1rem;
+   width: 25rem;
+   overflow: hidden;
+}
+
+.aboutImg {
+   width: 100%;
+   height: auto;
+   object-fit: cover;
+}
+
+.why {
+   display: grid;
+   grid-row-start: 2;
+   grid-row-end: 3;
+   grid-column-start: 1;
+   grid-column-end: 5;
+   background-color: blue;
+   padding: 2rem;
+   justify-content: space-between;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-template-rows: auto 2.5fr;
+}
+
+.whyTitleWrap {
+   display: flex;
+   grid-row-start: 1;
+   grid-row-end: 2;
+   grid-column-start: 1;
+   grid-column-end: 5;
+   justify-content: center;
+}
+
+.reasonWrap {
+   background-color: yellow;
+   margin: 1.5rem;
+   padding-top: 0.5rem;
+   padding-bottom: 0.5rem;
+   padding-left: 1rem;
+   padding-right: 1rem;
+   border-radius: 1rem;
+}
+
+/* SUBMIT */
+
+.main-container-submit {
+   display: grid;
+   grid-row-start: 2;
+   grid-row-end: 3;
+   grid-column-start: 2;
+   grid-column-end: 3;
+   background-color: pink;
+   height: 100%;
+   grid-template-columns: auto;
+   grid-template-rows: auto auto;
+   padding-left: 8rem;
+   padding-right: 8rem;
+   padding-top: 2rem;
+}
+
+
+.submitPathTitle {
+   font-size: 2rem;
+   text-align: center;
+}

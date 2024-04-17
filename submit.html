@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>My Web Page | Submit</title>
+   <link rel="stylesheet" href="style.css">
+   <script src="script.js"></script>
+</head>
+
+<body>
+   <div class="container">
+      <header class="header">
+         <nav class="nav">
+            <a href="#home" class="home">Home</a>
+            <a href="#about" class="about">About</a>
+            <a href="#share" class="share">Share Paths</a>
+         </nav>
+         <img class="logo1" src="vajelloLibraryLogoLong.png" alt="The Valjello Library Logo">
+      </header>
+      <aside class="aside1"></aside>
+      <div class="main-container-submit">
+         <h1 class="submitPathTitle">Submit Your Path</h1>
+         <div class="submitForm">
+            <form action="submit_route.php" method="post" enctype="multipart/form-data">
+               <label for="route_name">Route Name:</label>
+               <input type="text" id="route_name" name="route_name" required>
+
+               <label for="location">Location:</label>
+               <input type="text" id="location" name="location" required>
+
+               <label for="distance">Distance (approx. in miles):</label>
+               <input type="number" id="distance" name="distance" step="0.01" placeholder="Approximate distance">
+
+               <label for="terrain">Terrain Type:</label>
+               <select id="terrain" name="terrain" required>
+                  <option value="">Select Terrain</option>
+                  <option value="road">Road</option>
+                  <option value="trail">Trail</option>
+                  <option value="mixed">Mixed</option>
+               </select>
+
+               <label for="difficulty">Difficulty Level:</label>
+               <select id="difficulty" name="difficulty" required>
+                  <option value="">Select Difficulty</option>
+                  <option value="easy">Easy</option>
+                  <option value="moderate">Moderate</option>
+                  <option value="hard">Hard</option>
+                  <option value="extreme">Extreme</option>
+               </select>
+
+               <label for="map">Upload Route Map:</label>
+               <input type="file" id="map" name="map" accept="image/png, image/jpeg, application/pdf" required>
+
+               <fieldset>
+                  <legend>Points of Interest</legend>
+                  <label for="poi1">Point of Interest #1:</label>
+                  <input type="text" id="poi1" name="poi1" placeholder="E.g., Central Park">
+
+                  <label for="poi2">Point of Interest #2:</label>
+                  <input type="text" id="poi2" name="poi2" placeholder="E.g., River View">
+
+                  <label for="poi3">Point of Interest #3:</label>
+                  <input type="text" id="poi3" name="poi3" placeholder="E.g., Historic Monument">
+               </fieldset>
+
+               <label for="bathroom_availability">Is there a bathroom available?</label>
+               <select id="bathroom_availability" name="bathroom_availability" required
+                  onchange="toggleBathroomDetails(this.value)">
+                  <option value="no">No</option>
+                  <option value="yes">Yes</option>
+               </select>
+
+               <div id="bathroom_details" style="display:none;">
+                  <label for="bathrooms">Location of Bathroom:</label>
+                  <textarea id="bathrooms" name="bathrooms"
+                     placeholder="Describe where bathrooms can be found along the route."></textarea>
+               </div>
+
+               <label for="description">Route Description:</label>
+               <textarea id="description" name="description"
+                  placeholder="Describe the route, share tips or why you like this route."></textarea>
+
+               <input type="submit" value="Submit">
+            </form>
+            <!-- https://web3forms.com -->
+         </div>
+      </div>
+      <aside class="aside2"></aside>
+      <footer class="footer">
+         <div class="left">
+            <p class="footerText">The Crowd Running</p>
+            <p class="footerText">We are doing this because running apps these days are gate keeping with a paywall,
+               We
+               are doing this because running apps these days are gate keeping with a paywall</p>
+            <p class="footerText">© 2024 The Crowd Running</p>
+         </div>
+         <div class="right">
+            <p class="footerText">Home</p>
+            <p class="footerText">About</p>
+            <p class="footerText">Share Path</p>
+      </footer>
+   </div>
+</body>
+
+</html>
