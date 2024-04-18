@@ -27,22 +27,34 @@ header {
    grid-row-end: 2;
    grid-column-start: 1;
    grid-column-end: 4;
-   background-color: white;
+   background-color: #fffbef;
    justify-content: space-around;
    height: 7rem;
    font-family: "Work Sans", sans-serif;
+   padding-top: 1rem;
 }
 
 .nav {
    display: flex;
    align-items: center;
    height: 100%;
+   margin-left: 1rem;
 }
 
 .nav a {
    text-decoration: none;
-   color: red;
-   padding: 1rem;
+   color: #db211b;
+   padding: 1.2rem;
+   font-family: "Work Sans", sans-serif;
+   font-weight: 600;
+   font-size: 1.2rem;
+}
+
+.logo1 {
+   margin-top: 1rem;
+   margin-right: 1.8rem;
+   width: auto;
+   height: 50%;
 }
 
 .aside1 {
@@ -50,7 +62,7 @@ header {
    grid-row-end: 3;
    grid-column-start: 1;
    grid-column-end: 2;
-   background-color: white;
+   background-color: #fffbef;
    height: 100%;
 }
 
@@ -128,9 +140,9 @@ h3.sharePathPhrase {
 .sharePathButton {
    padding: 1rem;
    width: 10rem;
-   border-radius: 5rem;
+   border-radius: 0.2rem;
    border: none;
-   background-color: red;
+   background-color: #fd271f;
    color: white;
    font-family: "Work Sans", sans-serif;
 }
@@ -140,7 +152,7 @@ h3.sharePathPhrase {
    grid-row-end: 3;
    grid-column-start: 3;
    grid-column-end: 4;
-   background-color: white;
+   background-color: #fffbef;
    height: 100%;
 }
 
@@ -151,9 +163,10 @@ footer {
    grid-row-end: 4;
    grid-column-start: 1;
    grid-column-end: 4;
-   background-color: white;
+   background-color: #fffbef;
    grid-template-columns: 1fr 1fr;
    grid-template-rows: 1fr;
+   font-size: 0.9rem;
 }
 
 .left {
@@ -162,7 +175,7 @@ footer {
    grid-row-end: 2;
    grid-column-start: 1;
    grid-column-end: 2; */
-   background-color: white;
+   background-color: #fffbef;
    justify-content: center;
    align-items: center;
    padding-left: 12rem;
@@ -172,12 +185,13 @@ footer {
 }
 
 .right {
+   display: block;
    /* display: flex; */
    /* grid-row-start: 1;
    grid-row-end: 2;
    grid-column-start: 3;
    grid-column-end: 4; */
-   background-color: white;
+   background-color: #fffbef;
    justify-content: center;
    align-items: center;
    padding-right: 0rem;
@@ -195,7 +209,7 @@ footer {
    grid-row-end: 3;
    grid-column-start: 2;
    grid-column-end: 3;
-   background-color: white;
+   background-color: #fcfaf3;
    height: 100%;
    grid-template-columns: 1fr 1fr 1fr 1fr;
    grid-template-rows: 1fr 1fr;
@@ -207,7 +221,7 @@ footer {
    grid-row-end: 2;
    grid-column-start: 1;
    grid-column-end: 5;
-   background-color: white;
+   background-color: #fffbef;
    padding: 2rem;
    justify-content: space-between;
 }
@@ -217,20 +231,34 @@ footer {
    width: 25rem;
 }
 
+h1.aboutTitle {
+   font-family: "Work Sans", sans-serif;
+   font-size: 2.5rem;
+}
+
 .aboutButton {
-   padding: 1rem;
-   width: 10rem;
-   border-radius: 5rem;
+   padding: 1rem 2rem 1rem 2rem;
+   width: auto;
+   border-radius: 0.2rem;
    border: none;
    display: inline-block;
    margin-top: 0.5rem;
    margin-bottom: 0.5rem;
    margin-left: 0rem;
    margin-right: 0.5rem;
-   background-color: red;
+   background-color: #fd271f;
    color: white;
    font-family: "Work Sans", sans-serif;
+   font-weight: 600;
+   font-size: 1rem;
 }
+
+p.aboutText {
+   font-size: 1rem;
+   font-family: "Work Sans", sans-serif;
+   color: black;
+}
+
 
 .aboutImgWrap {
    padding: 1rem;
@@ -250,11 +278,11 @@ footer {
    grid-row-end: 3;
    grid-column-start: 1;
    grid-column-end: 5;
-   background-color: white;
-   padding: 2rem;
+   background-color: #fffbef;
+   padding: 1rem;
    justify-content: space-between;
    grid-template-columns: 1fr 1fr 1fr 1fr;
-   grid-template-rows: auto 2.5fr;
+   grid-template-rows: auto 2fr;
 }
 
 .whyTitleWrap {
@@ -264,38 +292,41 @@ footer {
    grid-column-start: 1;
    grid-column-end: 5;
    justify-content: center;
+   margin-bottom: 1rem;
+   font-size: 1.7rem;
 }
 
 .reasonWrap {
-   background-color: red;
-   margin: 1.5rem;
-   padding-top: 0.7rem;
-   padding-bottom: 0.5rem;
-   padding-left: 1.3rem;
-   padding-right: 1.3rem;
-   border-radius: 1rem;
+   background-color: #fd271f;
+   margin: 1rem;
+   padding-top: 0.3rem;
+   padding-bottom: 0.3rem;
+   padding-left: 1rem;
+   padding-right: 1rem;
+   border-radius: 0.2rem;
    color: white;
    font-size: 0.8rem;
    text-align: center;
+   margin-top: 1rem;
 }
 
 .reason1Title {
-   font-size: 0.9rem;
+   font-size: 1rem;
    text-align: center;
 }
 
 .reason2Title {
-   font-size: 0.9rem;
+   font-size: 1rem;
    text-align: center;
 }
 
 .reason3Title {
-   font-size: 0.9rem;
+   font-size: 1rem;
    text-align: center;
 }
 
 .reason4Title {
-   font-size: 0.9rem;
+   font-size: 1rem;
    text-align: center;
 }
 
