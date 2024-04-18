@@ -200,7 +200,10 @@ footer {
    border-radius: 5rem;
    border: none;
    display: inline-block;
-   margin: 0.5rem;
+   margin-top: 0.5rem;
+   margin-bottom: 0.5rem;
+   margin-left: 0rem;
+   margin-right: 0.5rem;
    background-color: red;
    color: white;
    font-family: "Work Sans", sans-serif;
@@ -243,14 +246,36 @@ footer {
 .reasonWrap {
    background-color: red;
    margin: 1.5rem;
-   padding-top: 0.5rem;
+   padding-top: 0.7rem;
    padding-bottom: 0.5rem;
-   padding-left: 1rem;
-   padding-right: 1rem;
+   padding-left: 1.3rem;
+   padding-right: 1.3rem;
    border-radius: 1rem;
    color: white;
    font-size: 0.8rem;
+   text-align: center;
 }
+
+.reason1Title {
+   font-size: 0.9rem;
+   text-align: center;
+}
+
+.reason2Title {
+   font-size: 0.9rem;
+   text-align: center;
+}
+
+.reason3Title {
+   font-size: 0.9rem;
+   text-align: center;
+}
+
+.reason4Title {
+   font-size: 0.9rem;
+   text-align: center;
+}
+
 
 /* SUBMIT */
 
