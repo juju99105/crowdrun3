@@ -13,9 +13,13 @@
    <div class="container">
       <header class="header">
          <nav class="nav">
-            <a href="#home" class="home">Home</a>
-            <a href="#about" class="about">About</a>
-            <a href="#share" class="share">Share Paths</a>
+            <a href="index.html" class="home">Home</a>
+            <a href="about.html" class="about">About</a>
+            <a href="submit.html" class="share">Share Paths</a>
+            <form class="searchForm" action="search_results.html" method="get">
+               <input type="text" name="search" placeholder="Search trails..." required>
+               <button type="submit">Search</button>
+           </form>
          </nav>
          <img class="logo1" src="vajelloLibraryLogoLong.png" alt="The Valjello Library Logo">
       </header>
@@ -99,9 +103,10 @@
             <p class="footerText">© 2024 The Crowd Running</p>
          </div>
          <div class="right">
-            <p class="footerText">Home</p>
-            <p class="footerText">About</p>
-            <p class="footerText">Share Path</p>
+            <a href="index.html" class="footerLink">Home</a>
+            <a href="about.html" class="footerLink">About</a>
+            <a href="submit.html" class="footerLink">Share Path</a>
+         </div>
       </footer>
    </div>
 </body>
