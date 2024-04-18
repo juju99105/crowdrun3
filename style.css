@@ -185,20 +185,24 @@ footer {
 }
 
 .right {
-   display: block;
-   /* display: flex; */
-   /* grid-row-start: 1;
-   grid-row-end: 2;
-   grid-column-start: 3;
-   grid-column-end: 4; */
+   display: grid;
+   grid-template-columns: auto;
+   grid-template-rows: auto auto auto;
    background-color: #fffbef;
-   justify-content: center;
-   align-items: center;
    padding-right: 0rem;
    padding-left: 20rem;
    padding-top: 4rem;
    padding-bottom: 5rem;
 }
+
+.right a {
+   text-decoration: none;
+   font-family: "Work Sans", sans-serif;
+   font-weight: 400;
+   color: black;
+}
+
+
 
 /* ABOUT */
 
