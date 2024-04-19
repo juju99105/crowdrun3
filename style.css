@@ -43,11 +43,23 @@ header {
 
 .nav a {
    text-decoration: none;
-   color: #db211b;
+   color: #fd271f;
    padding: 1.2rem;
    font-family: "Work Sans", sans-serif;
    font-weight: 600;
    font-size: 1.2rem;
+}
+
+.nav a:after {
+   content: '';
+   display: flex;
+   border-bottom: solid 1px #fd271f;
+   transform: scaleX(0);
+   transition: transform .3s ease-in-out;
+}
+
+.nav a:hover:after {
+   transform: scaleX(1);
 }
 
 .logo1 {
@@ -167,6 +179,7 @@ footer {
    grid-template-columns: 1fr 1fr;
    grid-template-rows: 1fr;
    font-size: 0.9rem;
+   padding-top: 4rem;
 }
 
 .left {
@@ -193,6 +206,7 @@ footer {
    padding-left: 20rem;
    padding-top: 4rem;
    padding-bottom: 5rem;
+   margin-left: 0rem;
 }
 
 .right a {
@@ -202,6 +216,29 @@ footer {
    color: black;
 }
 
+.right a.home {
+   width: 2.8rem;
+}
+
+.right a.about {
+   width: 3rem;
+}
+
+.right a.submit {
+   width: 5.5rem;
+}
+
+.right a:after {
+   content: '';
+   display: flex;
+   border-bottom: solid 1px #000000;
+   transform: scaleX(0);
+   transition: transform .3s ease-in-out;
+}
+
+.right a:hover:after {
+   transform: scaleX(1);
+}
 
 
 /* ABOUT */
@@ -297,7 +334,7 @@ p.aboutText {
    grid-column-end: 5;
    justify-content: center;
    margin-bottom: 1rem;
-   font-size: 1.7rem;
+   font-size: 2rem;
 }
 
 .reasonWrap {
@@ -309,28 +346,29 @@ p.aboutText {
    padding-right: 1rem;
    border-radius: 0.2rem;
    color: white;
-   font-size: 0.8rem;
+   font-size: 0.9rem;
    text-align: center;
    margin-top: 1rem;
+   line-height: 1.5rem;
 }
 
 .reason1Title {
-   font-size: 1rem;
+   font-size: 1.3rem;
    text-align: center;
 }
 
 .reason2Title {
-   font-size: 1rem;
+   font-size: 1.3rem;
    text-align: center;
 }
 
 .reason3Title {
-   font-size: 1rem;
+   font-size: 1.3rem;
    text-align: center;
 }
 
 .reason4Title {
-   font-size: 1rem;
+   font-size: 1.3rem;
    text-align: center;
 }
 
