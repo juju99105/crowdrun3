@@ -157,6 +157,7 @@ h3.sharePathPhrase {
    background-color: #fd271f;
    color: white;
    font-family: "Work Sans", sans-serif;
+   cursor: pointer;
 }
 
 .aside2 {
@@ -224,7 +225,7 @@ footer {
    width: 3rem;
 }
 
-.right a.submit {
+.right a.share {
    width: 5.5rem;
 }
 
@@ -292,6 +293,7 @@ h1.aboutTitle {
    font-family: "Work Sans", sans-serif;
    font-weight: 600;
    font-size: 1rem;
+   cursor: pointer;
 }
 
 p.aboutText {
@@ -321,6 +323,7 @@ p.aboutText {
    grid-column-end: 5;
    background-color: #fffbef;
    padding: 1rem;
+   padding-top: 3rem;
    justify-content: space-between;
    grid-template-columns: 1fr 1fr 1fr 1fr;
    grid-template-rows: auto 2fr;
@@ -334,7 +337,7 @@ p.aboutText {
    grid-column-end: 5;
    justify-content: center;
    margin-bottom: 1rem;
-   font-size: 2rem;
+   font-size: 1.6rem;
 }
 
 .reasonWrap {
@@ -419,6 +422,42 @@ form.submitFormContainer {
    font-weight: 400;
 }
 
+fieldset {
+   margin-bottom: 1rem;
+}
+
+.submitForm {
+   font-family: "Work Sans", sans-serif;
+   font-weight: 450;
+   line-height: 2rem;
+   padding-left: 3rem;
+   padding-right: 3rem;
+}
+
+form.submitFormContainer input,
+form.submitFormContainer select,
+form.submitFormContainer textarea {
+   margin-bottom: 0.5rem;
+   font-family: 'Work Sans', sans-serif;
+   font-size: 1rem;
+   font-weight: 400;
+}
+
+form.submitFormContainer textarea {
+   width: 100%;
+   box-sizing: border-box;
+}
+
+#bathroom_availability {
+   width: 5rem;
+}
+
+#terrain,
+#difficulty,
+#distance {
+   width: 12rem;
+}
+
 input[type="file"] {
    display: none;
 }
@@ -434,7 +473,7 @@ input[type="file"] {
    margin-bottom: 1rem;
    cursor: pointer;
    text-align: center;
-   font-size: 0.7rem;
+   font-size: 0.8rem;
    font-weight: 400;
    line-height: 2rem;
    border-radius: 0.2rem;

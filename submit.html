@@ -28,10 +28,13 @@
          <div class="submitForm">
             <form class="submitFormContainer" action="submit_route.php" method="post" enctype="multipart/form-data">
                <label for="route_name">Route Name:</label>
-               <input type="text" id="route_name" name="route_name" required>
+               <input type="text" id="route_name" name="route_name" placeholder="Name your route" required>
 
-               <label for="location">Location:</label>
-               <input type="text" id="location" name="location" required>
+               <label for="location">Beginning Location:</label>
+               <input type="text" id="start_location" name="start_location" required>
+
+               <label for="location">Ending Location:</label>
+               <input type="text" id="end_location" name="end_location" required>
 
                <label for="distance">Distance (approx. in miles):</label>
                <input type="number" id="distance" name="distance" step="0.01" placeholder="Approximate distance">
@@ -47,10 +50,9 @@
                <label for="difficulty">Difficulty Level:</label>
                <select id="difficulty" name="difficulty" required>
                   <option value="">Select Difficulty</option>
-                  <option value="easy">Easy</option>
-                  <option value="moderate">Moderate</option>
-                  <option value="hard">Hard</option>
-                  <option value="extreme">Extreme</option>
+                  <option value="beginner">Beginner</option>
+                  <option value="intermediate">Intermediate</option>
+                  <option value="advanced ">Advanced</option>
                </select>
 
                <label for="map">Upload Route Map:</label>
@@ -68,8 +70,15 @@
                   <input type="text" id="poi2" name="poi2" placeholder="E.g., River View">
 
                   <label for="poi3">Point of Interest #3:</label>
-                  <input type="text" id="poi3" name="poi3" placeholder="E.g., Historic Monument">
+                  <input type="text" id="poi3" name="poi3" placeholder="E.g.,Monument">
                </fieldset>
+
+               <label for="routepics">Upload Route Pics:</label>
+               <label class="chooseFileButton">
+                  <input type="file" id="routepics" name="routepics" accept="image/png, image/jpeg, application/pdf"
+                     required>
+                  Choose File
+               </label>
 
                <label for="bathroom_availability">Is there a bathroom available?</label>
                <select id="bathroom_availability" name="bathroom_availability" required
@@ -79,7 +88,7 @@
                </select>
 
                <div id="bathroom_details" style="display:none;">
-                  <label for="bathrooms">Location of Bathroom:</label>
+                  <label for="bathrooms">Location of Bathroom:<br></label>
                   <textarea id="bathrooms" name="bathrooms"
                      placeholder="Describe where bathrooms can be found along the route."></textarea>
                </div>
@@ -105,9 +114,9 @@
             <p class="footerText">© 2024 The CrowdRunners</p>
          </div>
          <div class="right">
-            <a class="home" href="index.html" class="home">Home</a>
-            <a class="about" href="about.html" class="about">About</a>
-            <a class="submit" href="submit.html" class="share">Share Paths</a>
+            <a href="index.html" class="home">Home</a>
+            <a href="about.html" class="about">About</a>
+            <a href="submit.html" class="share">Share Paths</a>
       </footer>
    </div>
 </body>
