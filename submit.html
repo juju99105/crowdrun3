@@ -25,7 +25,7 @@
       <div class="main-container-submit">
          <h1 class="submitPathTitle">Submit Your Path</h1>
          <div class="submitForm">
-            <form action="submit_route.php" method="post" enctype="multipart/form-data">
+            <form class="submitFormContainer" action="submit_route.php" method="post" enctype="multipart/form-data">
                <label for="route_name">Route Name:</label>
                <input type="text" id="route_name" name="route_name" required>
 
@@ -53,7 +53,10 @@
                </select>
 
                <label for="map">Upload Route Map:</label>
-               <input type="file" id="map" name="map" accept="image/png, image/jpeg, application/pdf" required>
+               <label class="chooseFileButton">
+                  <input type="file" id="map" name="map" accept="image/png, image/jpeg, application/pdf" required>
+                  Choose File
+               </label>
 
                <fieldset>
                   <legend>Points of Interest</legend>
@@ -84,7 +87,7 @@
                <textarea id="description" name="description"
                   placeholder="Describe the route, share tips or why you like this route."></textarea>
 
-               <input type="submit" value="Submit">
+               <input class="submitPathButton" type="submit" value="Submit Path">
             </form>
             <!-- https://web3forms.com -->
          </div>
