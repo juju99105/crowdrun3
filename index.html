@@ -1,76 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>My Web Page | Home</title>
+   <title>Crowd Runners | Home</title>
+   <link rel="icon" type="image/x-icon" href="favicon.ico">
    <link rel="stylesheet" href="style.css">
-   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
 </head>
 <body>
-   <div class="container home-container" id="home-page">
+   <div class="container">
       <header class="header">
          <nav class="nav">
             <a href="index.html" class="home">Home</a>
             <a href="about.html" class="about">About</a>
             <a href="submit.html" class="share">Share Paths</a>
-            <form class="search-bar" action="search_results.html" method="get">
-               <input type="text" name="search" placeholder="Search trails..." required>
-               <button type="submit">Search</button>
-           </form>
          </nav>
-         <img class="logo1" src="vajelloLibraryLogoLong.png" alt="The Valjello Library Logo">
+         <a href="index.html">
+            <img class="logo1" src="crowdrunners_20240420092213.png" alt="Crowd Runners Logo">
+         </a>
       </header>
-      <div class="map-container">
-         <iframe 
-           width="100%" 
-           height="450" 
-           frameborder="0" 
-           scrolling="no" 
-           marginheight="0" 
-           marginwidth="0" 
-           src="https://api.maptiler.com/maps/basic-v2/?key=xPlg42HdHlrvmiOwZFQW#1.9/51.28785/24.70258"
-           title="Map">
-         </iframe>
-       </div>
-      <div class="content-wrapper">
-         <main class="home-main">
-            <h1>Discover and Share Inspiring Running Trails</h1>
-            <p>Join a vibrant community of runners sharing the joy of the journey. Explore new paths, track your progress, and connect with fellow enthusiasts as we pave the way to a healthier, happier world, one run at a time.</p>
-            <section class="search-path">
-                <input type="text" placeholder="Select a route you want to see details here...">
-                <button>SEARCH PATH</button>
-            </section>
-            <section class="route-details">
-                <article>
-                    <button>Home</button>
-                    <input type="search" placeholder="Search...">
-                    <button>Share paths...</button>
-                </article>
-                <article>
-                    <button>SHARE</button>
-                </article>
-            </section>
-         </main>
-         <footer class="footer">
-            <div class="left">
-               <p class="footerText">The Crowd Running</p>
-               <p class="footerText">Discover new paths and share your favorite routes on our free, community-driven
-                  platform. No subscriptions,
-                  — just pure running joy supported by our community. Share us today and help us pave the way for
-                  accessible
-                  running for everyone.</p>
-               <p class="footerText">© 2024 The Crowd Running</p>
-            </div>
-            <div class="right">
-               <a href="index.html" class="footerLink">Home</a>
-               <a href="about.html" class="footerLink">About</a>
-               <a href="submit.html" class="footerLink">Share Path</a>
-            </div>
-         </footer>
+      <aside class="aside1"></aside>
+      <div class="main-container">
+         <div class="infoSearchBar">
+            <input type="text" id="trail-search" placeholder="Search trails...">
+            <button type="button" onclick="searchTrails()">Search</button>
+            <!-- this search bar can search for trail info and the results can be displayed in infoWrapper -->
+         </div>
+         <div class="infoWrapper" id="infoWrapper">
+            <!-- this area needs api to display trail info -->
+         </div>
+         <div class="mapLocation">
+            <input type="text" id="location-search" placeholder="Enter ZIP code or city">
+            <button type="button" onclick="searchLocation()">Search</button>
+            <!-- this search bar searches for location on map -->
+         </div>
+         <div class="map" id="map">
+            <!-- google map -->
+         </div>
+         <div class="sharePath">
+            <h3 class="sharePathPhrase">Have routes that you run and want to share?</h3>
+            <a href="submit.html">
+               <button class="sharePathButton">Share your Paths</button>
+            </a>
+         </div>
       </div>
+      <aside class="aside2"></aside>
+      <footer class="footer">
+         <div class="left">
+            <p class="footerText">The CrowdRunners</p>
+            <p class="footerText">Discover new paths and share your favorite routes on our free, community-driven
+               platform. No subscriptions,
+               — just pure running joy supported by our community. Share us today and help us pave the way for
+               accessible
+               running for everyone.</p>
+            <p class="footerText">© 2024 The CrowdRunners</p>
+         </div>
+         <div class="right">
+            <a href="index.html" class="home">Home</a>
+            <a href="about.html" class="about">About</a>
+            <a href="submit.html" class="share">Share Paths</a>
+      </footer>
    </div>
-   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+   <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD37IKKzBVzFWzI28DucJufaJjeCweiqWQ&libraries=places&callback=initMap">
+   </script>
    <script src="script.js"></script>
 </body>
 </html>
