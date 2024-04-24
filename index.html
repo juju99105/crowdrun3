@@ -26,7 +26,7 @@
          <div class="infoSearchBar"></div>
          <div class="infoWrapper"></div>
          <div class="mapLocation"></div>
-         <div class="map"></div>
+         <div class="map" id="map"></div>
          <div class="sharePath">
             <h3 class="sharePathPhrase">Have routes that you run and want to share?</h3>
             <a href="submit.html">
@@ -51,6 +51,10 @@
             <a href="submit.html" class="share">Share Paths</a>
       </footer>
    </div>
+   <script src="script.js"></script>
+   <script async
+   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD37IKKzBVzFWzI28DucJufaJjeCweiqWQ&libraries=places&callback=initMap">
+  </script>
 </body>
 <!-- to do list:
 - map api
