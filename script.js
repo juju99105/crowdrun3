@@ -152,7 +152,7 @@ var map;
     directionsService.route({
       origin: startPoint,
       destination: endPoint,
-      travelMode: 'DRIVING'
+      travelMode: 'WALKING'
     }, function(response, status) {
       if (status === 'OK') {
         console.log(response);
@@ -164,3 +164,32 @@ var map;
       }
     });
   }
+
+  //search on map
+function searchLocation() {
+  const address = document.getElementById('location-search').value;
+  geocoder.geocode({ 'address': address }, function(results, status) {
+    if (status === 'OK') {
+      map.setCenter(results[0].geometry.location);
+      new google.maps.Marker({
+        map: map,
+        position: results[0].geometry.location
+      });
+    } else {
+      alert('Geocode was not successful for the following reason: ' + status);
+    }
+  });
+}
+
+// Event Listener
+document.getElementById('location-search').addEventListener('keypress', function(e) {
+  if (e.key === 'Enter') {
+      searchLocation();
+  }
+});
+
+document.getElementById('location-search').addEventListener('keypress', function(e) {
+  if (e.key === 'Enter') {
+    searchLocation();
+  }
+});
