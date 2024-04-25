@@ -1,3 +1,4 @@
+// Bathroom Yes/No
 function toggleBathroomDetails(value) {
    const details = document.getElementById('bathroom_details');
    if (value === 'yes') {
@@ -31,8 +32,6 @@ var map;
   }
 
 }
-
-
   function calculateAndDisplayRoute(directionsService, directionsDisplay, startPoint, endPoint, bounds) {
     directionsService.route({
       origin: startPoint,
