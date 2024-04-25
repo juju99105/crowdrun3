@@ -17,6 +17,7 @@ var map;
       zoom: 8
     });
 
+// Display multiple routes
     var listPos = [
       //mills college run
       { arriveeLat: 37.782674, arriveeLng: -122.187797, departLat: 37.771174, departLng: -122.176506 },
@@ -146,7 +147,6 @@ var map;
 
 }
 
-
 // create routes
   function calculateAndDisplayRoute(directionsService, directionsDisplay, startPoint, endPoint, bounds) {
     directionsService.route({
@@ -160,7 +160,7 @@ var map;
         bounds.union(response.routes[0].bounds);
         map.fitBounds(bounds);
       } else {
-        window.alert('Impossible d afficher la route ' + status);
+        window.alert('Unable to display route' + status);
       }
     });
   }
