@@ -8,6 +8,7 @@ function toggleBathroomDetails(value) {
    }
 }
 
+// initiate map
 var map;
   function initMap() {
     var directionsService = new google.maps.DirectionsService;
@@ -32,6 +33,9 @@ var map;
   }
 
 }
+
+
+// create routes
   function calculateAndDisplayRoute(directionsService, directionsDisplay, startPoint, endPoint, bounds) {
     directionsService.route({
       origin: startPoint,
