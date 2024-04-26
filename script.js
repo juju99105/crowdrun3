@@ -1,9 +1,4 @@
 function toggleBathroomDetails(value) {
-<<<<<<< Updated upstream
-   const details = document.getElementById('bathroom_details');
-   if (value === 'yes') {
-      details.style.display = 'block';
-=======
   const details = document.getElementById('bathroom_details');
   if (value === 'yes') {
      details.style.display = 'block';
@@ -275,13 +270,9 @@ function searchLocation() {
        map: map,
        position: results[0].geometry.location
      });
->>>>>>> Stashed changes
    } else {
       details.style.display = 'none';
    }
-<<<<<<< Updated upstream
-}
-=======
  });
 }
 //search trails
@@ -312,44 +303,39 @@ function displayNoTrailFoundMessage() {
 }
 // Event Listener
 document.addEventListener('DOMContentLoaded', function() {
+  //on home page
   var searchBtn = document.getElementById('trail-search-btn');
   var displayAllBtn = document.getElementById('display-all-btn');
-  if (searchBtn) {
+  if (searchBtn && displayAllBtn) {
     searchBtn.addEventListener('click', searchTrails);
-  }
-  if (displayAllBtn) {
     displayAllBtn.addEventListener('click', displayAllTrails);
   }
-});
-//submit button
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('submit-form');
-  const result = document.getElementById('result');
-  const submitButton = document.getElementById('submit-button');
-  submitButton.addEventListener('click', function(e) {
-    e.preventDefault();
-    result.style.display = "block";
-    result.innerHTML = "Please wait...";
-    fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      body: new FormData(form),
-    })
-    .then(async response => {
-      const json = await response.json();
-      if (response.ok) {
-        alert("Thank you, we've received your submission.");
-        form.reset();
-      } else {
-        console.error(json);
-        result.innerHTML = json.message;
-      }
-    })
-    .catch(error => {
-      console.error(error);
-      result.innerHTML = "Something went wrong!";
+  //on submit page
+  var form = document.getElementById('submit-form');
+  var result = document.getElementById('result');
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      result.style.display = "block";
+      result.innerHTML = "Please wait...";
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: new FormData(form),
+      })
+      .then(async response => {
+        const json = await response.json();
+        if (response.ok) {
+          alert("Thank you, we've received your submission.");
+          form.reset();
+        } else {
+          console.error(json);
+          result.innerHTML = json.message;
+        }
+      })
+      .catch(error => {
+        console.error(error);
+        result.innerHTML = "Something went wrong!";
+      });
     });
-  });
+  }
 });
-
-
->>>>>>> Stashed changes

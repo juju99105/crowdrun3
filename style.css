@@ -32,6 +32,7 @@ header {
    height: 7rem;
    font-family: "Work Sans", sans-serif;
    padding-top: 1rem;
+   margin-bottom: 2rem;
 }
 
 .nav {
@@ -86,8 +87,8 @@ header {
    grid-column-end: 3;
    background-color: #fffbef;
    height: 100%;
-   grid-template-columns: 1fr 3fr;
-   grid-template-rows: 1fr 6fr 2fr;
+   grid-template-columns: 1.5fr 3fr;
+   grid-template-rows: 0.1fr 1fr 0.2fr;
 }
 
 .infoSearchBar {
@@ -95,7 +96,7 @@ header {
    grid-row-end: 2;
    grid-column-start: 1;
    grid-column-end: 2;
-   background-color: yellow;
+   background-color: #fffbef;
    height: 100%;
 }
 
@@ -104,16 +105,29 @@ header {
    grid-row-end: 3;
    grid-column-start: 1;
    grid-column-end: 2;
-   background-color: blue;
-   height: 100%;
+   background-color: white;
+   max-height: 100vh;
+   height: 35rem;
+   color: black;
+   font-weight: 500;
+   padding: 2rem;
+   overflow-y: auto;
+   font-family: "Work Sans", sans-serif;
+   border-radius: 0.2rem 0 0 0.2rem;
+
 }
+
+.error-message {
+   color: #FF0000; 
+   margin-top: 10px;
+ }
 
 .mapLocation {
    grid-row-start: 1;
    grid-row-end: 2;
    grid-column-start: 2;
    grid-column-end: 3;
-   background-color: navajowhite;
+   background-color: #fffbef;
    height: 100%;
 
 }
@@ -123,9 +137,18 @@ header {
    grid-row-end: 3;
    grid-column-start: 2;
    grid-column-end: 3;
-   background-color: orange;
+   background-color: #fffbef;
    height: 100%;
+   border-radius: 0 0.2rem 0.2rem 0;
 }
+
+#map {
+   height: 100%;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+ }
+ 
 
 .sharePath {
    display: flex;
@@ -180,7 +203,7 @@ footer {
    grid-template-columns: 1fr 1fr;
    grid-template-rows: 1fr;
    font-size: 0.9rem;
-   padding-top: 4rem;
+   padding-top: 0rem;
 }
 
 .left {
@@ -484,6 +507,89 @@ input[type="file"] {
    text-align: center;
 }
 
+#trail-search-btn {
+   padding: 1rem;
+   width: 5rem;
+   border-radius: 0.2rem;
+   border: none;
+   background-color: #fd271f;
+   color: white;
+   font-family: "Work Sans", sans-serif;
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+   font-size: 0.7rem;
+   font-weight: 400;
+}
+
+#trail-search-btn:hover {
+   background-color: #fffbef;
+   color: #fd271f;
+}
+
+#display-all-btn {
+   padding: 1rem;
+   width: auto;
+   border-radius: 0.2rem;
+   border: none;
+   background-color: #fd271f;
+   color: white;
+   font-family: "Work Sans", sans-serif;
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+   font-size: 0.7rem;
+   font-weight: 400;
+}
+
+#display-all-btn:hover {
+   background-color: #fffbef;
+   color: #fd271f;
+}
+
+#trail-search {
+   padding: 1rem;
+   width: 8rem;
+   border-radius: 0.2rem;
+   border: none;
+   background-color: white;
+   color: black;
+   font-family: "Work Sans", sans-serif;
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+   font-size: 0.7rem;
+   font-weight: 400;
+}
+
+#location-search {
+   padding: 1rem;
+   width: 38rem;
+   border-radius: 0.2rem;
+   border: none;
+   background-color: white;
+   color: black;
+   font-family: "Work Sans", sans-serif;
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+   font-size: 0.7rem;
+   font-weight: 400;
+   margin-left: 1rem;
+   margin-right: 1rem;
+}
+
+#location-search-btn {
+   padding: 1rem;
+   width: auto;
+   border-radius: 0.2rem;
+   border: none;
+   background-color: #fd271f;
+   color: white;
+   font-family: "Work Sans", sans-serif;
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+   font-size: 0.7rem;
+   font-weight: 400;
+}
+
+
 .modal {
    display: none; 
    position: fixed; 
@@ -518,4 +624,3 @@ input[type="file"] {
    text-decoration: none;
    cursor: pointer;
  }
- 

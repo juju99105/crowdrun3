@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,10 +22,22 @@
       </header>
       <aside class="aside1"></aside>
       <div class="main-container">
-         <div class="infoSearchBar"></div>
-         <div class="infoWrapper"></div>
-         <div class="mapLocation"></div>
-         <div class="map"></div>
+         <div class="infoSearchBar">
+            <input type="text" id="trail-search" placeholder="Search trails...">
+            <button id="trail-search-btn">Search</button>
+            <button id="display-all-btn">Display All Trails</button>
+         </div>
+         <div class="infoWrapper" id="infoWrapper">
+            <!-- this area needs api to display trail info -->
+         </div>
+         <div class="mapLocation">
+            <input type="text" id="location-search" placeholder="Enter ZIP code or city">
+            <button type="button" onclick="searchLocation()">Search</button>
+            <!-- this search bar searches for location on map -->
+         </div>
+         <div class="map" id="map">
+            <!-- google map -->
+         </div>
          <div class="sharePath">
             <h3 class="sharePathPhrase">Have routes that you run and want to share?</h3>
             <a href="submit.html">
@@ -51,9 +62,7 @@
             <a href="submit.html" class="share">Share Paths</a>
       </footer>
    </div>
+   <script src="script.js"></script>
+   <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD37IKKzBVzFWzI28DucJufaJjeCweiqWQ&callback=initMap&libraries=places,geometry"></script>
 </body>
-<!-- to do list:
-- map api
-- thumbs up, thumbs down api -->
-
 </html>
