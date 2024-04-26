@@ -32,7 +32,7 @@ header {
    height: 7rem;
    font-family: "Work Sans", sans-serif;
    padding-top: 1rem;
-   margin-bottom: 4rem;
+   margin-bottom: 2rem;
 }
 
 .nav {
@@ -88,7 +88,7 @@ header {
    background-color: #fffbef;
    height: 100%;
    grid-template-columns: 1.5fr 3fr;
-   grid-template-rows: 0.1fr 0.8fr 0.2fr;
+   grid-template-rows: 0.1fr 1fr 0.2fr;
 }
 
 .infoSearchBar {
@@ -107,6 +107,7 @@ header {
    grid-column-end: 2;
    background-color: white;
    max-height: 100vh;
+   height: 35rem;
    color: black;
    font-weight: 500;
    padding: 2rem;
