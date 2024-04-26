@@ -1,14 +1,5 @@
 // Bathroom Yes/No
 function toggleBathroomDetails(value) {
-<<<<<<< Updated upstream
-   const details = document.getElementById('bathroom_details');
-   if (value === 'yes') {
-      details.style.display = 'block';
-   } else {
-      details.style.display = 'none';
-   }
-}
-=======
   const details = document.getElementById('bathroom_details');
   if (value === 'yes') {
      details.style.display = 'block';
@@ -322,4 +313,3 @@ document.addEventListener('DOMContentLoaded', function() {
     displayAllBtn.addEventListener('click', displayAllTrails);
   }
 });
->>>>>>> Stashed changes
