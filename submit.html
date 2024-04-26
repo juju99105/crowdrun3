@@ -7,7 +7,6 @@
    <title>Crowd Runners | Share</title>
    <link rel="stylesheet" href="style.css">
    <link rel="icon" type="image/x-icon" href="favicon.ico">
-   <script src="script.js"></script>
 </head>
 
 <body>
@@ -26,7 +25,8 @@
       <div class="main-container-submit">
          <h1 class="submitPathTitle">Submit Your Path</h1>
          <div class="submitForm">
-            <form class="submitFormContainer" action="submit_route.php" method="post" enctype="multipart/form-data">
+            <form id="submit-form" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
+               <input type="hidden" name="access_key" value="5dff97dd-79a0-46cf-bba0-1dcce49ec9af">
                <label for="route_name">Route Name:</label>
                <input type="text" id="route_name" name="route_name" placeholder="Name your route" required>
 
@@ -57,7 +57,7 @@
 
                <label for="map">Upload Route Map:</label>
                <label class="chooseFileButton">
-                  <input type="file" id="map" name="map" accept="image/png, image/jpeg, application/pdf" required>
+                  <input type="file" id="map" name="map" accept="image/png, image/jpeg, application/pdf">
                   Choose File
                </label>
 
@@ -75,8 +75,7 @@
 
                <label for="routepics">Upload Route Pics:</label>
                <label class="chooseFileButton">
-                  <input type="file" id="routepics" name="routepics" accept="image/png, image/jpeg, application/pdf"
-                     required>
+                  <input type="file" id="routepics" name="routepics" accept="image/png, image/jpeg, application/pdf">
                   Choose File
                </label>
 
@@ -96,10 +95,10 @@
                <label for="description">Route Description:</label>
                <textarea id="description" name="description"
                   placeholder="Describe the route, share tips or why you like this route."></textarea>
-
-               <input class="submitPathButton" type="submit" value="Submit Path">
+   
+               <input type="button" id="submit-button" class="submitPathButton" value="Submit Path">
             </form>
-            <!-- https://web3forms.com -->
+            <div id="result" style="display: none;"></div>
          </div>
       </div>
       <aside class="aside2"></aside>
@@ -119,6 +118,14 @@
             <a href="submit.html" class="share">Share Paths</a>
       </footer>
    </div>
+   <div id="myModal" class="modal">
+      <div class="modal-content">
+      <span class="close">&times;</span>
+      <p id="modalText"></p>
+      </div>
+   </div>
+   <script src="https://web3forms.com/client/script.js" async defer></script>
+   <script src="script.js"></script>
 </body>
 
 </html>
